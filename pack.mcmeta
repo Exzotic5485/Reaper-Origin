@@ -1,1 +1,6 @@
-{"pack": {"name":"ReaperOrigin","id":"reaperorigin","pack_format":7,"authors":"Exzoitc","version":"1.17.1","description":"A halloween reaper origin for the origins-jam"}}
+{
+  "pack": {
+    "pack_format": 7,
+    "description": "Reaper origin assets"
+  }
+}

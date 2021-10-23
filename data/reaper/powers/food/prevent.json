@@ -1,8 +1,0 @@
-{
-    "name": "Souls",
-    "description": "You cannot eat regular food but require souls to function",
-    "type": "origins:prevent_item_use",
-    "item_condition": {
-        "type": "origins:food"
-    }
-}
