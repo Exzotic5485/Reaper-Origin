@@ -1,0 +1,111 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:command",
+                        "command": "execute if data entity @s {SelectedItem:{tag:{diamondscythe:1b}}}",
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "permission_level": 4
+                    },
+                    {
+                        "type": "origins:command",
+                        "command": "execute if data entity @s {SelectedItem:{tag:{netheritescythe:1b}}}",
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "permission_level": 4
+                    }
+                ]
+            },
+            {
+                "type": "origins:command",
+                "command": "execute if score @s ScytheLevel matches 5..",
+                "comparison": ">=",
+                "compare_to": 1,
+                "permission_level": 4
+            },
+            {
+                "type": "origins:command",
+                "command": "execute unless entity @e[tag=altar,distance=..3]",
+                "comparison": ">=",
+                "compare_to": 1,
+                "permission_level": 4
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "inverted": true,
+                    "type": "origins:dimension",
+                    "dimension": "reaper:limbo_dim"
+                },
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "particle minecraft:dust_color_transition 0.631 0 0.788 1 0 0 0 ~ ~ ~ 0.5 1 0.5 .1 1000"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "execute in reaper:limbo_dim run tp ~ 100 ~"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "spreadplayers ~ ~ 1 1 false @s"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "particle minecraft:dust_color_transition 0.631 0 0.788 1 0 0 0 ~ ~ ~ 0.5 1 0.5 .1 1000"
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:dimension",
+                    "dimension": "reaper:limbo_dim"
+                },
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "particle minecraft:dust_color_transition 0.631 0 0.788 1 0 0 0 ~ ~ ~ 0.5 1 0.5 .1 1000"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "execute in minecraft:overworld run tp ~ 100 ~"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "spreadplayers ~ ~ 1 1 false @s"
+                        },
+                        {
+                            "type": "origins:execute_command",
+                            "command": "particle minecraft:dust_color_transition 0.631 0 0.788 1 0 0 0 ~ ~ ~ 0.5 1 0.5 .1 1000"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 0
+    },
+    "key": {
+        "key": "key.use"
+    }
+}

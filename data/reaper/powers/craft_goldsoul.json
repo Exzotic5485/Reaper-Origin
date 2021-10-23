@@ -1,0 +1,33 @@
+{
+    "hidden": true,
+    "type": "origins:item_on_item",
+    "using_item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "on_item_condition": {
+        "type": "origins:nbt",
+        "nbt": "{soulbottle:1b}"
+    },
+    "result": {
+        "item": "minecraft:potion",
+        "tag": "{CustomPotionColor:13746944,display:{Name:'[{\"text\":\"Gold Infused\",\"italic\":false,\"color\":\"#ffcc00\"},{\"text\":\" \"},{\"text\":\"Soul Bottle\",\"color\":\"#ccffff\"}]'},goldsoul:1b,HideFlags:32}",
+        "amount": 1
+    },
+    "on_item_action": {
+        "type": "origins:consume",
+        "amount": 1
+    },
+    "using_item_action": {
+        "type": "origins:consume",
+        "amount": 1
+    },
+    "entity_action": {
+        "type": "origins:play_sound",
+        "sound": "minecraft:block.anvil.use",
+        "volume": 0.45,
+        "pitch": 2
+    }
+}

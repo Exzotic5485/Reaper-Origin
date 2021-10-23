@@ -1,0 +1,13 @@
+{
+    "hidden": true,
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:feed",
+        "food": 10,
+        "saturation": 0.6
+    },
+    "item_condition": {
+        "type": "origins:nbt",
+        "nbt": "{goldsoul:1b}"
+    }
+}

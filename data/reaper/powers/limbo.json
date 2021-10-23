@@ -1,0 +1,49 @@
+{
+    "hidden": true,
+    "type": "origins:prevent_death",
+    "damage_condition": {
+        "type": "origins:attacker",
+        "entity_condition": {
+            "type": "origins:command",
+            "command": "execute if data entity @s {SelectedItem:{tag:{netheritescythe:true}}}",
+            "comparison": ">=",
+            "compare_to": 1,
+            "permission_level": 4
+        }
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute in reaper:limbo_dim run tp ~ ~ ~",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "spreadplayers ~ ~ 1 20 false @s",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scoreboard players set @s SoulTimer 200",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s reaper:soultimer",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "effect give @s minecraft:slowness 999999 2 true",
+                "permission_level": 4
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power revoke @s reaper:limbo",
+                "permission_level": 4
+            }
+        ]
+    }
+}

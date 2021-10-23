@@ -1,0 +1,63 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:command",
+                "command": "execute if score @s ScytheLevel matches 5..",
+                "comparison": ">=",
+                "compare_to": 1,
+                "permission_level": 4
+            },
+            {
+                "type": "origins:sneaking"
+            }
+        ]
+    },
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:damage",
+                    "amount": 1,
+                    "source": {
+                        "name": "starve",
+                        "bypasses_armor": true
+                    }
+                }
+            },
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:feed",
+                            "food": 1,
+                            "saturation": 0.1
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:particle.soul_escape",
+                            "volume": 1,
+                            "pitch": 1
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bientity_condition": {
+        "type": "origins:actor_condition",
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": "<",
+            "compare_to": 20
+        }
+    },
+    "action_result": "success"
+}

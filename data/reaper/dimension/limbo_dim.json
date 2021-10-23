@@ -1,0 +1,12 @@
+{
+  "type": "reaper:limbo_dt",
+  "generator": {
+    "biome_source": {
+      "biome": "reaper:limbo",
+      "type": "minecraft:fixed"
+    },
+    "seed": 1,
+    "settings": "reaper:limbo_n",
+    "type": "minecraft:noise"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Brittle Bones",
+    "description": "Due to being made of just bones you take more fall damage",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "fall"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.1
+    }
+}

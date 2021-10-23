@@ -1,0 +1,5 @@
+{
+    "name": "Sinking",
+    "description": "You are made of bones so cant float in water",
+    "type": "origins:ignore_water"
+}
