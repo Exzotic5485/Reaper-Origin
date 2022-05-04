@@ -1,12 +1,8 @@
 {
-  "surface_builder": "reaper:limbo_sb",
-  "depth": 0.125,
-  "scale": 0.05,
   "temperature": 0.8,
   "downfall": 0.4,
   "precipitation": "none",
   "category": "plains",
-  "player_spawn_friendly": false,
   "effects": {
     "sky_color": 0,
     "fog_color": 6052956,
@@ -15,7 +11,6 @@
     "grass_color": 0,
     "foliage_color": 0
   },
-  "starts": [],
   "spawners": {
     "monster": [],
     "creature": [],
@@ -30,6 +25,7 @@
     "air": []
   },
   "features": [
+    [],
     [],
     [],
     [],

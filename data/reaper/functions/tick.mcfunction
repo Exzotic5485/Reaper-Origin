@@ -39,3 +39,7 @@ power grant @e[tag=l1altar] reaper:a1_particle
 power grant @e[tag=l1altar] reaper:a1_upgrade
 power grant @e[tag=l2altar] reaper:a2_particle
 power grant @e[tag=l2altar] reaper:a2_upgrade
+
+# Phantom Pig
+effect give @e[tag=phantompig] minecraft:invisibility 999999 0 true
+execute as @e[tag=phantompig] at @s run particle minecraft:dust 1 1 1 5 ~ ~ ~ 0.1 0.1 0.1 .1 100
